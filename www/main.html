@@ -106,28 +106,7 @@
 		
 
 		function onDeviceReady(){
-			var push = PushNotification.init({ "android": {"senderID": "560922606646"},
-			"ios": {"alert": "true", "badge": "true", "sound": "true"}, "windows": {} } );
-
-			push.on('registration', function(data) {
-				deviceId = data.registrationId;
-				getPosition();				
-			}); 
-			
-			push.on('error', function(e) {
-				notificationFlag = false;
-				getPosition();
-			}); 
-
-			push.on('notification', function(data) {
-				navigator.notification.alert(
-                    data.message,         // message
-                    null,                 // callback
-                    data.title,           // title
-                    'Ok'                  // buttonName
-				);			
-			});
-			
+			alert('dom ready');
 			// Blanker on change
 			document.addEventListener("online", doWhenOnline, false);
 			document.addEventListener("offline", doWhenOffline, false);
