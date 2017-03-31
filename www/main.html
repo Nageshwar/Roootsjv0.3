@@ -107,8 +107,7 @@
 
 		function onDeviceReady(){
 			document.addEventListener("resume", onResume, false);
-			document.addEventListener("pause", onPause, false);
-
+			
 			alert('dom ready');	alert('dom ready');
 			// Blanker on change
 			document.addEventListener("online", doWhenOnline, false);
@@ -125,12 +124,9 @@
 				
 		function onResume() {
 			// Handle the resume event
-			alert('welcome Back');
+			getPosition();
 		}
-		function onPause() {
-			// Handle the resume event
-			alert('See you soon');
-		}
+		
 		function doWhenOnline(){
 			document.getElementById('offline-screen').style.display = 'none';
 		}
