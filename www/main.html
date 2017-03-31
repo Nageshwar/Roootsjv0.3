@@ -108,7 +108,6 @@
 		function onDeviceReady(){
 			document.addEventListener("resume", onResume, false);
 			
-			alert('dom ready');	alert('dom ready');
 			// Blanker on change
 			document.addEventListener("online", doWhenOnline, false);
 			document.addEventListener("offline", doWhenOffline, false);
@@ -124,6 +123,7 @@
 				
 		function onResume() {
 			// Handle the resume event
+			alert();
 			getPosition();
 		}
 		
